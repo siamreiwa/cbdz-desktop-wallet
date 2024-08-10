@@ -79,7 +79,7 @@ export default class FormMosaicDefinitionTransaction extends FormMosaicDefinitio
     grid-auto-flow: column;
     grid-column-gap: 0.3rem;
     align-items: baseline;
-    color: #44004e;
+    color: #004c71;
     width: max-content;
 }
 

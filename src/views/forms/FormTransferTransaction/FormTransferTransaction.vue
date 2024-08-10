@@ -44,7 +44,7 @@
                     <div v-if="mosaicInputsManager.hasFreeSlots()" class="form-row align-right action-link" style="margin-top: -0.1rem;">
                         <a
                             v-if="mosaicInputsManager.hasFreeSlots()"
-                            style="color: #44004e; margin-right: 0.1rem; font-size: 0.14rem;"
+                            style="color: #004c71; margin-right: 0.1rem; font-size: 0.14rem;"
                             @click="addMosaicAttachmentInput"
                             >{{ $t('add_mosaic') }}</a
                         >

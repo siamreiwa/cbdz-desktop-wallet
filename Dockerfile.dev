@@ -1,0 +1,27 @@
+FROM node:16-alpine
+
+# Install build dependencies
+RUN apk add --no-cache python3 make g++ linux-headers udev libusb-dev eudev-dev
+
+# Set Python 3 as the default Python version
+RUN ln -sf python3 /usr/bin/python
+
+# Install node-gyp globally
+RUN npm install -g node-gyp
+
+WORKDIR /app
+
+# Copy package.json and package-lock.json
+COPY package*.json ./
+
+# Install dependencies
+RUN npm install
+
+# Copy the rest of the application
+COPY . .
+
+# Expose port 8080
+EXPOSE 8080
+
+# Command to run the application
+CMD ["npm", "run", "dev"]

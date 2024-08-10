@@ -67,7 +67,7 @@ export default class ProtectedPrivateKeyDisplay extends ProtectedPrivateKeyDispl
     font-family: @symbolFontLight;
     text-overflow: ellipsis;
     overflow: hidden;
-    color: #44004e;
+    color: #004c71;
 }
 
 .account-detail-row-3cols {
