@@ -1,25 +1,18 @@
-# Symbol Desktop Wallet
+# CBDZ Desktop Wallet
 
-[![build][wallet-desktop-build]][wallet-desktop-job]
-[![lint][wallet-desktop-lint]][wallet-desktop-job]
-[![test][wallet-desktop-test]][wallet-desktop-job]
-[![][wallet-desktop-cov]][wallet-desktop-cov-link]
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-[wallet-desktop-job]: https://jenkins.symboldev.com/blue/organizations/jenkins/Symbol%2FWallets%2Fdesktop-wallet/activity/?branch=dev
-[wallet-desktop-build]: https://jenkins.symboldev.com/buildStatus/icon?job=Symbol%2FWallets%2Fdesktop-wallet%2Fdev
-[wallet-desktop-lint]: https://jenkins.symboldev.com/buildStatus/icon?job=Symbol%2FWallets%2Fdesktop-wallet%2Fdev&config=wallet-desktop-lint
-[wallet-desktop-test]: https://jenkins.symboldev.com/buildStatus/icon?job=Symbol%2FWallets%2Fdesktop-wallet%2Fdev&config=wallet-desktop-test
-[wallet-desktop-cov]: https://codecov.io/gh/symbol/desktop-wallet/branch/dev/graph/badge.svg?token=SSYYBMK0M7&flag=wallet-desktop
-[wallet-desktop-cov-link]: https://codecov.io/gh/symbol/desktop-wallet/tree/dev/
+Cross-platform client for CBDZ(Symbol blockchain) to manage accounts, mosaics, namespaces, and issue transactions.
 
-Cross-platform client for Symbol to manage accounts, mosaics, namespaces, and issue transactions.
+This project is a fork of [Symbol Desktop Wallet](https://github.com/symbol/desktop-wallet). 
+
+We extend our gratitude to the original contributors for their valuable work.
 
 ## Installation
 
-Symbol Desktop Wallet is available for Mac, Windows, and as a web application.
+CBDZ Desktop Wallet is available for Mac, Windows, and as a web application.
 
-1. Download Symbol Desktop Wallet from the [releases section](https://github.com/symbol/desktop-wallet/releases).
+1. Download CBDZ Desktop Wallet from the [releases section](https://github.com/siamreiwa/cbdz-desktop-wallet/releases).
 
 2. Launch the executable file and follow the installation instructions.
 
@@ -27,17 +20,17 @@ Symbol Desktop Wallet is available for Mac, Windows, and as a web application.
 
 ## Building instructions
 
-Symbol CLI require **Node.js 16 LTS** to execute.
+CBDZ CLI require **Node.js 16 LTS** and **npm install -g node-gyp@^7.1.0** to execute.
 
 1. Clone the project.
 
 ```
-git clone https://github.com/symbol/desktop-wallet.git
+git clone https://github.com/siamreiwa/cbdz-desktop-wallet
 ```
 
 2. Install the dependencies.
 ```
-cd symbol-desktop-wallet
+cd cbdz-desktop-wallet
 npm install
 ```
 
@@ -50,7 +43,7 @@ npm run dev
 4. Visit http://localhost:8080/#/ in your browser.
 
 ## Release
-1. For local use, build Symbol Wallet Electron app (only Electron version support Ledger wallets), default build for MacOS, Windows and Linux
+1. For local use, build CBDZ Wallet Electron app (only Electron version support Ledger wallets), default build for MacOS, Windows and Linux
 
 <pre>
 # to skip code signing
@@ -83,9 +76,9 @@ npm run release
 
     2.6 Validate if the app is signed with a `Developer ID Certificate` and notarized
 
-    <pre>spctl -a -t exec -v ./release/mac/Symbol\ Wallet.app
-    # Output(Success): ./release/mac/Symbol Wallet.app: accepted source=Notarized Developer ID
-    # Output(Failure): ./release/mac/Symbol Wallet.app: rejected source=Unnotarized Developer ID
+    <pre>spctl -a -t exec -v ./release/mac/CBDZ\ Wallet.app
+    # Output(Success): ./release/mac/CBDZ Wallet.app: accepted source=Notarized Developer ID
+    # Output(Failure): ./release/mac/CBDZ Wallet.app: rejected source=Unnotarized Developer ID
     </pre>
 
 ## Getting help
@@ -93,7 +86,6 @@ npm run release
 Use the following available resources to get help:
 
 - [Symbol Documentation][docs]
-- Join the community [discord group][discord], [slack group (#sig-client)][slack]
 - If you found a bug, [open a new issue][issues]
 
 ## Contributing
@@ -103,12 +95,10 @@ Check [CONTRIBUTING](CONTRIBUTING.md) for information on how to contribute.
 
 ## License
 
-(C) Symbol Contributors 2022
+(C) Siam Reiwa (2020) Co., Ltd. 2024
 
 Licensed under the [Apache License 2.0](LICENSE)
 
-[self]: https://github.com/symbol/desktop-wallet
+[self]: https://github.com/siamreiwa/cbdz-desktop-wallet
 [docs]: https://docs.symbolplatform.com
-[issues]: https://github.com/symbol/desktop-wallet/issues
-[discord]: https://discord.gg/xymcity
-[slack]: https://join.slack.com/t/nem2/shared_invite/enQtMzY4MDc2NTg0ODgyLWZmZWRiMjViYTVhZjEzOTA0MzUyMTA1NTA5OWQ0MWUzNTA4NjM5OTJhOGViOTBhNjkxYWVhMWRiZDRkOTE0YmU
+[issues]: https://github.com/siamreiwa/cbdz-desktop-wallet/issues

@@ -22,6 +22,7 @@
                         <div class="bottom-welcome-text">{{ $t('program_description_line1') }}</div>
                         <div class="bottom-welcome-text">{{ $t('program_description_line2') }}</div>
                         <div class="bottom-welcome-text">{{ $t('program_description_line3') }}</div>
+                        <div class="bottom-welcome-text">{{ $t('program_description_line4') }}</div>
                     </div>
                     <div class="login-card radius">
                         <div class="img-box" />

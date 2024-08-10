@@ -5,17 +5,17 @@
     <key>BuildMachineOSBuild</key>
     <string>16F73</string>
     <key>CFBundleDisplayName</key>
-    <string>Symbol Wallet</string>
+    <string>CBDZ Wallet</string>
     <key>CFBundleExecutable</key>
-    <string>symbol-desktop-wallet</string>
+    <string>cbdz-desktop-wallet</string>
     <key>CFBundleIconFile</key>
     <string>electron.icns</string>
     <key>CFBundleIdentifier</key>
-    <string>io.nem.symbol.desktop-wallet</string>
+    <string>com.siamreiwa.cbdz.desktop-wallet</string>
     <key>CFBundleInfoDictionaryVersion</key>
     <string>6.0</string>
     <key>CFBundleName</key>
-    <string>Symbol Wallet</string>
+    <string>CBDZ Wallet</string>
     <key>CFBundlePackageType</key>
     <string>APPL</string>
     <key>CFBundleShortVersionString</key>

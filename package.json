@@ -1,11 +1,11 @@
 {
-    "name": "symbol-desktop-wallet",
-    "description": "Symbol Wallet",
-    "homepage": "https://github.com/symbol/desktop-wallet",
+    "name": "cbdz-desktop-wallet",
+    "description": "CBDZ Wallet",
+    "homepage": "https://github.com/siamreiwa/cbdz-desktop-wallet",
     "version": "1.0.13",
     "repository": {
         "type": "git",
-        "url": "https://github.com/symbol/desktop-wallet.git"
+        "url": "https://github.com/siamreiwa/cbdz-desktop-wallet.git"
     },
     "license": "Apache-2.0",
     "scripts": {
@@ -35,11 +35,10 @@
         "node-hid:prebuild-install:lin": "export npm_config_platform=linux && npm run node-hid:prebuild-install",
         "version": "echo $npm_package_version"
     },
-    "author": "The Symbol Syndicate <contributors@symbol.dev>",
+    "author": "Siam Reiwa(2020) Co., Ltd.",
     "contributors": [
         {
-            "name": "The Symbol Syndicate",
-            "email": "contributors@symbol.dev"
+            "name": "Siam Reiwa(2020) Co., Ltd."
         }
     ],
     "dependencies": {
@@ -158,10 +157,10 @@
     },
     "main": "./public/build.js",
     "build": {
-        "appId": "io.nem.symbol.desktop-wallet",
+        "appId": "com.siamreiwa.cbdz.desktop-wallet",
         "extends": null,
-        "copyright": "Copyright © 2019-2021 NEM",
-        "productName": "Symbol Wallet",
+        "copyright": "Copyright © Siam Reiwa(2020) Co., Ltd.",
+        "productName": "CBDZ Wallet",
         "artifactName": "${name}-${os}-${arch}-${version}.${ext}",
         "icon": "./dist/assets/icons/Icon.icns",
         "files": [
