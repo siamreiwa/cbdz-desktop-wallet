@@ -40,7 +40,7 @@ export interface AppConfig {
 }
 
 const defaultAppConfig: AppConfig = {
-    title: 'Symbol Wallet',
+    title: 'CBDZ Wallet',
     constants: {
         EVENTS_THROTTLING_TIME: 6000,
         MAX_LISTENER_RECONNECT_TRIES: 20,
@@ -53,15 +53,9 @@ const defaultAppConfig: AppConfig = {
             ? Formatters.getDecimalSeparator(navigator.languages[0])
             : Number('1.1').toLocaleString().substring(1, 2),
     },
-    languages: [
-        { value: 'en-US', label: 'English' },
-        { value: 'zh-CN', label: '中文' },
-        { value: 'ja-JP', label: '日本語' },
-        { value: 'ko-KR', label: '한국어' },
-        { value: 'ru-RU', label: 'Русский' },
-    ],
+    languages: [{ value: 'en-US', label: 'English' }],
     articlesFeedUrl: 'https://symbol.github.io/symbol-rss-feeds/',
-    repositoryDataUrl: 'https://api.github.com/repos/symbol/desktop-wallet/releases/latest',
+    repositoryDataUrl: 'https://api.github.com/repos/siamreiwa/cbdz-desktop-wallet/releases/latest',
     offlineNodeModelUrl: 'https://localhost:3000',
     symbolDocsScamAlertUrl: 'https://docs.symbol.dev/guides/account/scams-and-security.html',
 };
