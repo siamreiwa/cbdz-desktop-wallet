@@ -3,9 +3,10 @@
         <Tabs v-if="!isEditionMode" size="small">
             <TabPane :label="$t('assets')" name="name1">
                 <div class="mosaicList secondary_page_animate">
-                    <div v-for="(entry, index) in filteredBalanceEntries" :key="index" class="mosaic_data">
+                    <div v-for="(entry, index) in sortedFilteredBalanceEntries" :key="index" class="mosaic_data">
                         <span class="img_container">
-                            <img v-if="entry.id.equals(networkMosaic)" src="@/views/resources/img/symbol/XYMCoin.png" alt />
+                            <img v-if="entry.name === 'canade.cbdz'" src="@/views/resources/img/cbdz/CBDZCoin.png" alt />
+                            <img v-else-if="entry.id.equals(networkMosaic)" src="@/views/resources/img/symbol/XYMCoin.png" alt />
                             <img v-else src="@/views/resources/img/symbol/XYMCoin.png" class="grayed-xym-logo" />
                         </span>
                         <span class="mosaic_name">{{ entry.name !== '' ? entry.name : entry.id.toHex() }}</span>
@@ -41,7 +42,7 @@
                 </div>
                 <div class="mosaic-data-list">
                     <div
-                        v-for="(entry, index) in allBalanceEntries"
+                        v-for="(entry, index) in sortedAllBalanceEntries"
                         :key="index"
                         :class="['mosaic_data', index === 0 ? 'padding_top_0' : '']"
                         class="mosaic_data pointer"
@@ -70,7 +71,43 @@
 
 <script lang="ts">
 import { MosaicBalanceListTs } from './MosaicBalanceListTs';
-export default class MosaicBalanceList extends MosaicBalanceListTs {}
+export default class MosaicBalanceList extends MosaicBalanceListTs {
+    get sortedFilteredBalanceEntries() {
+        return this.filteredBalanceEntries.sort((a, b) => {
+            if (a.name === 'canade.cbdz') {
+                return -1;
+            }
+            if (b.name === 'canade.cbdz') {
+                return 1;
+            }
+            if (a.id.equals(this.networkMosaic)) {
+                return -1;
+            }
+            if (b.id.equals(this.networkMosaic)) {
+                return 1;
+            }
+            return 0;
+        });
+    }
+
+    get sortedAllBalanceEntries() {
+        return this.allBalanceEntries.sort((a, b) => {
+            if (a.name === 'canade.cbdz') {
+                return -1;
+            }
+            if (b.name === 'canade.cbdz') {
+                return 1;
+            }
+            if (a.id.equals(this.networkMosaic)) {
+                return -1;
+            }
+            if (b.id.equals(this.networkMosaic)) {
+                return 1;
+            }
+            return 0;
+        });
+    }
+}
 </script>
 <style lang="less" scoped>
 @import './MosaicBalanceList.less';
